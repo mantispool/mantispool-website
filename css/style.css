@@ -1,28 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
-:root {
-	--primary-color: #3a4052;
-}
-
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
 body {
+	margin: 0;
+	height: 100vh;
 	font-family: 'Open Sans', sans-serif;
-	line-height: 1.5;
 }
 
-.showcase {
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.grid-container {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 100px 1fr 1fr 100px;
+		grid-template-areas:
+			"pic1				.					.						pic2"
+			"showcase		showcase	showcase		showcase"
+			"panel1			panel1		panel1			panel1"
+			"about	 	 	about			about				about";
+		height: 100vh;
+		margin: 2em;
+}
+
+section.pic1 {
+	grid-area: pic1;
+	justify-self: start;
+	align-self: center;
+	z-index: 2;
+}
+
+section.pic2 {
+	grid-area: pic2;
+	justify-self: center;
+	align-self: center;
+	z-index: 2;
+}
+
+section.showcase {
+	grid-area: showcase;
+	justify-self: center;
+	align-self: start;
 	text-align: center;
 	color: #fff;
-	padding: 0 20px;
+	/* padding: 0 20px; */
+	z-index: 2;
+}
+
+section.panel1 {
+	grid-area: panel1;
+	justify-self: center;
+	align-self: center;
+	z-index: 2;
+}
+
+section.about {
+	grid-area: about;
+	justify-self: center;
+	align-self: center;
+	color: #ccc;
+	z-index: 2;
+}
+
+.img-mantis {
+  width: 100px;
+  height: 100px;
+  /* object-fit: cover; */
+  border-radius: 50%;
+}
+
+.img-cardano {
+  width: 100px;
+  height: 100px;
 }
 
 .video-container {
@@ -32,7 +78,7 @@ body {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	background: url('./video/static_blue_network.png') no-repeat center center cover;
+	background: rgb(17,40,60) url('./img/static_blue_network.png') no-repeat center center/cover;
 }
 
 
@@ -56,24 +102,4 @@ body {
 	left: 0;
 	background: rgba(0, 0, 0, 0.6);
 	position: absolute;
-}
-
-.content {
-	z-index: 2;
-}
-
-
-#about {
-	padding: 20px;
-	text-align: center;
-}
-
-#about p {
-	font-size: 1.2rem;
-	max-width: 600px;
-	margin: auto;
-}
-
-.social a {
-	margin: 0 5px;
 }
