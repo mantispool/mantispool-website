@@ -12,10 +12,11 @@ body {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 100px 1fr 1fr 100px;
 		grid-template-areas:
-			"pic1				.					.						pic2"
+			"pic1			.			.				pic2"
 			"showcase		showcase	showcase		showcase"
 			"panel1			panel1		panel1			panel1"
-			"about	 	 	about			about				about";
+			"social			social		social			social"
+			"about	 	 	about		about			about";
 		height: 100vh;
 		margin: 2em;
 }
@@ -51,6 +52,14 @@ section.panel1 {
 	z-index: 2;
 }
 
+section.social {
+	grid-area: social;
+	justify-self: center;
+	align-self: center;
+	color: rgb(17,40,60);
+	z-index: 2;
+}
+
 section.about {
 	grid-area: about;
 	justify-self: center;
@@ -58,7 +67,8 @@ section.about {
 	color: rgb(17,40,60);
 	z-index: 2;
 }
-
+ 
+ 
 .img-mantis {
   width: 100px;
   height: 100px;
