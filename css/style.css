@@ -8,7 +8,7 @@ body {
 
 .grid-container {
 		display: grid;
-		grid-gap: 20px;
+		grid-gap: 40px;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 100px 1fr 1fr 100px 100px;
 		grid-template-areas:
@@ -44,14 +44,14 @@ section.showcase {
 
 section.panel1 {
 	grid-area: panel1;
-	justify-self: center;
+	justify-self: end;
 	align-self: start;
 	z-index: 2;
 }
 
 section.panel2 {
 	grid-area: panel2;
-	justify-self: center;
+	justify-self: start;
 	align-self: start;
 	z-index: 2;
 }
