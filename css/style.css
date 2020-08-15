@@ -10,12 +10,11 @@ body {
 		display: grid;
 		grid-gap: 20px;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-rows: 100px 1fr 1fr 1fr 100px;
+		grid-template-rows: 100px 1fr 1fr 100px 100px;
 		grid-template-areas:
-			"pic1			.			.				pic2"
+			"pic1			ticker		ticker			ticker"
 			"showcase		showcase	showcase		showcase"
-			"panel1			panel1		panel1			panel1"
-			"panel2			panel2		panel2			panel2"
+			"panel1			panel1		panel2			panel2"
 			"social			social		social			social"
 			"about	 	 	about		about			about";
 		height: 100vh;
@@ -29,10 +28,8 @@ section.pic1 {
 	z-index: 2;
 }
 
-section.pic2 {
-	grid-area: pic2;
-	justify-self: start;
-	align-self: left;
+section.ticker {
+	grid-area: ticker;
 	z-index: 2;
 }
 
@@ -42,28 +39,27 @@ section.showcase {
 	align-self: start;
 	text-align: center;
 	color: #fff;
-	/* padding: 0 20px; */
 	z-index: 2;
 }
 
 section.panel1 {
 	grid-area: panel1;
 	justify-self: center;
-	align-self: center;
+	align-self: start;
 	z-index: 2;
 }
 
 section.panel2 {
 	grid-area: panel2;
 	justify-self: center;
-	align-self: center;
+	align-self: start;
 	z-index: 2;
 }
 
 section.social {
 	grid-area: social;
 	justify-self: center;
-	align-self: center;
+	align-self: end;
 	color: rgb(17,40,60);
 	z-index: 2;
 }
@@ -71,7 +67,7 @@ section.social {
 section.about {
 	grid-area: about;
 	justify-self: center;
-	align-self: center;
+	align-self: start;
 	color: rgb(17,40,60);
 	z-index: 2;
 }
