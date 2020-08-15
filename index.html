@@ -47,26 +47,45 @@
             <li><span class="fa-li"><i class="far fa-square"></i></span>Professionally run with over 30 years of IT experience.</li>
             <li><span class="fa-li"><i class="far fa-square"></i></span>Rock solid security and extensive firewall and DDos protection.</li>
             <li><span class="fa-li"><i class="far fa-square"></i></span>You maintain custody and control of your ADA at all times.</li>
+            <li><span class="fa-li"><i class="far fa-square"></i></span>Stake pool operators never have access to your delegated ADA.</li>
             <li><span class="fa-li"><i class="far fa-square"></i></span>Delegate and relax. Your staking rewards auto-compound.</li>
           </ul>
         </div>
       </section>
 
-      <section class="panel2">
+      <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+      $.getJSON('https://js.adapools.org/pools/54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18/summary.json', function(data) { 
+      $.each( data.data, function( i, val ) { 
+          if(parseInt(val) > 100000) val=Math.round(parseInt(val)/1000000);
+          if(i=='blocks_lifetime') val=parseInt(val) + parseInt(data.data.blocks_epoch);
+          if(i=='total_stake') val=Math.round(parseInt(val)/1000000 * 100)/100;
+          $('#54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18_'+i).html(val).text();   
+      }); 
+          });
+      </script>
+      
+    <section class="panel2">
         <div class="card-panel">
           <h5>Latest News</h5>
           <ul class="fa-ul">
+            <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-14: Only 10% of current epoch blocks are being made by stake pools.</li>
             <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-14: Waiting for that first Shelley block to come our way!</li>
             <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-13: Ensured all nodes are running version 1.18.0.</li>
          </ul>
          <h5>Pool Details</h5>
          <ul class="fa-ul">
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Active Stake: 3.95M ₳</li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Live Stake: 2.43M ₳</li>
+          <li><span class="fa-li"><i class="far fa-square"></i></span>Live Stake: 
+            <span id="54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18_total_stake"></span>M ₳</li>
+          <li><span class="fa-li"><i class="far fa-square"></i></span>Delegators: 
+              <span id="54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18_delegators"></span><br>
           <li><span class="fa-li"><i class="far fa-square"></i></span>Pledge: 1.00M ₳</li>
           <li><span class="fa-li"><i class="far fa-square"></i></span>Margin: 1%</li>
           <li><span class="fa-li"><i class="far fa-square"></i></span>Fixed Cost: 340 ₳</li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Lifetime Blocks: 0</li>
+          <li><span class="fa-li"><i class="far fa-square"></i></span>Lifetime Blocks:
+            <span id="54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18_blocks_lifetime"></span></li>
+          <li><span class="fa-li"><i class="far fa-square"></i></span>Rank:
+            <span id="54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18_rank"></span></li>
        </ul>
       </div>
       </section>
