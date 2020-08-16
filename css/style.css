@@ -10,11 +10,13 @@ body {
 		display: grid;
 		grid-gap: 40px;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-rows: 100px 1fr 1fr 100px 100px;
+		grid-template-rows: 100px 1fr 1fr 1fr 1fr 100px 100px;
 		grid-template-areas:
 			"pic1			ticker		ticker			ticker"
 			"showcase		showcase	showcase		showcase"
 			"panel1			panel1		panel2			panel2"
+			".				staking		staking			."
+			".				stakepool	stakepool		."
 			"social			social		social			social"
 			"about	 	 	about		about			about";
 		height: 100vh;
@@ -53,6 +55,20 @@ section.panel2 {
 	grid-area: panel2;
 	justify-self: start;
 	align-self: start;
+	z-index: 2;
+}
+
+section.staking {
+	grid-area: staking;
+	/* justify-self: start;
+	align-self: start; */
+	z-index: 2;
+}
+
+section.stakepool {
+	grid-area: stakepool;
+	/* justify-self: start;
+	align-self: start; */
 	z-index: 2;
 }
 
