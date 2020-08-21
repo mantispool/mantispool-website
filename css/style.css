@@ -15,8 +15,8 @@ body {
 			"pic1			ticker		ticker			ticker"
 			"showcase		showcase	showcase		showcase"
 			"panel1			panel1		panel2			panel2"
-			".				staking		staking			."
-			".				stakepool	stakepool		."
+			"top10			top10		top10			top10"
+			"staking		staking		staking			staking"
 			"rewards		rewards		rewards			rewards"
 			"social			social		social			social"
 			"about	 	 	about		about			about";
@@ -59,13 +59,13 @@ section.panel2 {
 	z-index: 2;
 }
 
-section.staking {
-	grid-area: staking;
+section.top10 {
+	grid-area: top10;
 	z-index: 2;
 }
 
-section.stakepool {
-	grid-area: stakepool;
+section.staking {
+	grid-area: staking;
 	z-index: 2;
 }
 

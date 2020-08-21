@@ -69,10 +69,10 @@
         <div class="card-panel">
           <h5>Latest News</h5>
           <ul class="fa-ul">
+            <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-21: All nodes are now updated to the latest version 1.19.0.</li>
             <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-16: We did it! Got our first minted Shelley block.</li>
             <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-16: Epoch 212 (August 18). 20% of blocks will be made by stake pools.</li>
             <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-14: Only 10% of current epoch blocks are being made by stake pools.</li>
-            <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-13: Ensured all nodes are running version 1.18.0.</li>
          </ul>
          <h5>Pool Details</h5>
          <ul class="fa-ul">
@@ -91,34 +91,116 @@
       </div>
       </section>
 
+      <section class="top10">
+        <div class="card-panel">
+          <h5>Top Mantis Pool Delegators!</h5>
+          <h8>(Calculated based on ADA staked and the number of epochs you have stayed with the Mantis Pool (to epoch 212) - Your loyalty is appreciated!)</h8>
+          <table class="responsive-table">
+            <thead>
+              <tr>
+                  <th>First Epoch</th><th>Delegator</th><th>ADA Staked</th><th>Loyalty Epochs</th><th>Awesomeness Score!</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>209</td>
+                <td>e8120005a4b249f9d08df5028e2cd2381aea0288240c080e0cf4a6e2</td>
+                <td>432.21k ₳</td>
+                <td>4</td>
+                <td>1728840</td>
+              </tr>
+              <tr>  
+                <td>210</td>
+                <td>3f99f9161565a401676e7231ccf421d80d0ce74a99e4f212c203e428</td>
+                <td>296.00k ₳</td>
+                <td>3</td>
+                <td>888000</td>
+              </tr>
+              <tr>  
+                <td>210</td>
+                <td>ae243c96a369a21298b8ef24c11b8cc2998b32cfb004d502d64d76a5</td>
+                <td>150.46k ₳</td>
+                <td>3</td>
+                <td>451380</td>
+              </tr>
+              <tr>  
+                <td>209</td>
+                <td>0a3cd418af686fda3aa986908fcd999e54d7c4a9a34025a1e995d380</td>
+                <td>100.03k ₳</td>
+                <td>4</td>
+                <td>400120</td>
+              </tr>
+              <tr>  
+                <td>209</td>
+                <td>dc4d5fd2a22208e8a72c141bfbb37a97fb9a80f5354917908cb20807</td>
+                <td>62.12k ₳</td>
+                <td>4</td>
+                <td>248480</td>
+              </tr>
+              <tr>  
+                <td>209</td>
+                <td>7ebceb334b2c560e1545cc77fa1fdeb64ed66f0c5f033e2c829417fd</td>
+                <td>49.57k ₳</td>
+                <td>4</td>
+                <td>198280</td>
+              </tr>
+              <tr>  
+                <td>209</td>
+                <td>1faa57dacadd015395778b0832b96e0a595e8fb69368adcf4cd3b242</td>
+                <td>35.00k ₳</td>
+                <td>4</td>
+                <td>143040</td>
+              </tr>
+              <tr>  
+                <td>209</td>
+                <td>ffdf569169ff54a50b8e489c18607b0aa3b65b4440b8295d9d259541</td>
+                <td>35.00 ₳</td>
+                <td>4</td>
+                <td>140000</td>
+              </tr>
+              <tr>  
+                <td>209</td>
+                <td>f9d4af85f9868b39397908e74f663ae2a2b5adc56c322aa0d23fdc59</td>
+                <td>29.68 ₳</td>
+                <td>4</td>
+                <td>118720</td>
+              </tr>
+              <tr>  
+                <td>209</td>
+                <td>c5cc76416faf25326ca12fc94cb7581693e0d12ed08354f173040d95</td>
+                <td>27.52 ₳</td>
+                <td>4</td>
+                <td>110080</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>  
+      </section>
+
       <section class="staking">
         <div class="card-panel">
           <h5>What is staking?</h5>
           <p>Ada held on the Cardano network represents a stake in the network, with the size of the stake proportional to the amount of ada held. 
             The ability to delegate or pledge a stake is fundamental to how Cardano works.</p>
           <p>There are two ways an ada holder can earn rewards: by delegating their stake to a stake pool run by someone else, 
-            or by running their own stake pool.</p>
-          <p>The amount of stake delegated to a given stake pool is the primary way the Ouroboros protocol chooses who 
-            should add the next block to the blockchain, and receive a monetary reward for doing so.</p>
-          <p>The more stake is delegated to a stake pool (up to a certain point), the more likely it is to make the next 
+            or by running their own stake pool. The amount of stake delegated to a given stake pool is the primary way the Ouroboros protocol chooses who 
+            should add the next block to the blockchain, and receive a monetary reward for doing so.
+            The more stake is delegated to a stake pool (up to a certain point), the more likely it is to make the next 
             block – and the rewards that it earns are shared between everyone who delegated their stake to that stake pool.</p>
-        </div>  
-      </section>
-
-      <section class="stakepool">
-        <div class="card-panel">
           <h5>What is a stake pool?</h5>
           <p>Stake pools may be either public or private. A public stake pool is a Cardano network node with a public address that other users can 
             delegate to, and receive rewards. Private stake pools only deliver rewards to their owners.</p>
           <p>Stake pools are run by a reliable operator: an individual or business with the knowledge and resources to run the node 
             on a consistent basis. Ada holders can delegate to public stake pools if they wish to participate in the protocol and 
-            receive rewards, but do not wish to operate a Cardano network node themselves.</p>
-          <p>The more stake that is delegated to a stake pool, the greater chance it has of being selected as a slot leader. 
+            receive rewards, but do not wish to operate a Cardano network node themselves.
+            The more stake that is delegated to a stake pool, the greater chance it has of being selected as a slot leader. 
             Each time it is selected and produces a block that is accepted onto the blockchain, it is rewarded, and these 
             rewards are shared between the stake pool operator and stake pool delegators.</p>
           <p>Extensive research and development has gone into ensuring a fair, competitive marketplace that proportionately 
             incentivizes participation, and rewards the investment of time, energy, and resources.</p>
-        </div>  
+          </div>  
       </section>
 
       <section class="rewards">
