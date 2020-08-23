@@ -12,9 +12,21 @@
 
 <body>
 
-  <div class="video-container">
+  <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  $.getJSON('https://js.adapools.org/pools/54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18/summary.json', function(data) { 
+  $.each( data.data, function( i, val ) { 
+      if(parseInt(val) > 100000) val=Math.round(parseInt(val)/1000000);
+      if(i=='blocks_lifetime') val=parseInt(val) + parseInt(data.data.blocks_epoch);
+      if(i=='total_stake') val=Math.round(parseInt(val)/1000000 * 100)/100;
+      $('#54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18_'+i).html(val).text();   
+  }); 
+      });
+  </script>
+
+  <!-- <div class="video-container">
     <video src="video/video_blue_network.mp4" autoplay muted loop></video>
-  </div>
+  </div> -->
 
   <div class="grid-container">
 
@@ -27,14 +39,31 @@
       </section>
 
       <section class="showcase">
-        <h1>Mantis 1% Pool</h1>
+        <h1>Matis 1% Pool</h1>
         <h5>High performance low fee staking pool</h5>
         <a target="_blank" rel="noopener noreferrer" href="https://pooltool.io/pool/54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18/delegators" class="waves-effect waves-light btn">Ticker: MANT</a>
         <h6>Pool id: 54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18</h6>
+        <h8>Live Stake: <span id="54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18_total_stake"></span>M ₳</h8></br>
+        <h8>Delegators: <span id="54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18_delegators"></span></h8></br>
+        <h8>Pledge: 1.00M ₳</h8></br>
+        <h8>Margin: 1%</h8></br>
+        <h8>Fixed Cost: 340 ₳</h8></br>
+        <h8>Lifetime Blocks: <span id="54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18_blocks_lifetime"></span></h8></br>
+        <h8>Rank: <span id="54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18_rank"></span></h8></br>
       </section>
      
-      <section class="panel1">
-        <div class="card-panel">
+      <section class="news">
+          <h5>Latest News</h5>
+          <ul class="fa-ul">
+            <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-23: Delegator rewards for Epoch 211 are distributed this week.</li>
+            <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-21: All nodes are now updated to the latest version 1.19.0.</li>
+            <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-16: We did it! Got our first minted Shelley block.</li>
+            <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-16: Epoch 212 (August 18). 20% of blocks will be made by stake pools.</li>
+            <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-14: Only 10% of current epoch blocks are being made by stake pools.</li>
+         </ul>
+      </section>
+
+      <section class="pool">
           <h5>Incredibly Low 1% delegation fee</h5>
           <ul class="fa-ul">
             <li><span class="fa-li"><i class="far fa-square"></i></span>Commitment - 1 Million ADA pledged by pool operator.</li>
@@ -50,51 +79,11 @@
             <li><span class="fa-li"><i class="far fa-square"></i></span>Stake pool operators never have access to your delegated ADA.</li>
             <li><span class="fa-li"><i class="far fa-square"></i></span>Delegate and relax. Your staking rewards auto-compound.</li>
           </ul>
-        </div>
       </section>
-
-      <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script>
-      $.getJSON('https://js.adapools.org/pools/54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18/summary.json', function(data) { 
-      $.each( data.data, function( i, val ) { 
-          if(parseInt(val) > 100000) val=Math.round(parseInt(val)/1000000);
-          if(i=='blocks_lifetime') val=parseInt(val) + parseInt(data.data.blocks_epoch);
-          if(i=='total_stake') val=Math.round(parseInt(val)/1000000 * 100)/100;
-          $('#54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18_'+i).html(val).text();   
-      }); 
-          });
-      </script>
-      
-    <section class="panel2">
-        <div class="card-panel">
-          <h5>Latest News</h5>
-          <ul class="fa-ul">
-            <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-21: All nodes are now updated to the latest version 1.19.0.</li>
-            <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-16: We did it! Got our first minted Shelley block.</li>
-            <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-16: Epoch 212 (August 18). 20% of blocks will be made by stake pools.</li>
-            <li><span class="fa-li"><i class="far fa-square"></i></span>2020-08-14: Only 10% of current epoch blocks are being made by stake pools.</li>
-         </ul>
-         <h5>Pool Details</h5>
-         <ul class="fa-ul">
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Live Stake: 
-            <span id="54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18_total_stake"></span>M ₳</li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Delegators: 
-              <span id="54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18_delegators"></span><br>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Pledge: 1.00M ₳</li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Margin: 1%</li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Fixed Cost: 340 ₳</li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Lifetime Blocks:
-            <span id="54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18_blocks_lifetime"></span></li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Rank:
-            <span id="54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18_rank"></span></li>
-       </ul>
-      </div>
-      </section>
-
+     
       <section class="top10">
-        <div class="card-panel">
           <h5>Top Mantis Pool Delegators</h5>
-          <h8>(Calculated based on ADA staked and the number of epochs you have stayed with the Mantis Pool (to epoch 212) - Your loyalty is appreciated!)</h8>
+          <h8>(Calculated based on ADA staked and the number of epochs you have stayed with the Mantis Pool (to epoch 212) - Your loyalty is appreciated)</h8>
           <table class="responsive-table">
             <thead>
               <tr>
@@ -176,12 +165,10 @@
 
             </tbody>
           </table>
-        </div>  
       </section>
 
       <section class="staking">
-        <div class="card-panel">
-          <h5>What is staking?</h5>
+          <h5>What is Staking and Stake Pools?</h5>
           <p>Ada held on the Cardano network represents a stake in the network, with the size of the stake proportional to the amount of ada held. 
             The ability to delegate or pledge a stake is fundamental to how Cardano works.</p>
           <p>There are two ways an ada holder can earn rewards: by delegating their stake to a stake pool run by someone else, 
@@ -189,7 +176,6 @@
             should add the next block to the blockchain, and receive a monetary reward for doing so.
             The more stake is delegated to a stake pool (up to a certain point), the more likely it is to make the next 
             block – and the rewards that it earns are shared between everyone who delegated their stake to that stake pool.</p>
-          <h5>What is a stake pool?</h5>
           <p>Stake pools may be either public or private. A public stake pool is a Cardano network node with a public address that other users can 
             delegate to, and receive rewards. Private stake pools only deliver rewards to their owners.</p>
           <p>Stake pools are run by a reliable operator: an individual or business with the knowledge and resources to run the node 
@@ -200,11 +186,6 @@
             rewards are shared between the stake pool operator and stake pool delegators.</p>
           <p>Extensive research and development has gone into ensuring a fair, competitive marketplace that proportionately 
             incentivizes participation, and rewards the investment of time, energy, and resources.</p>
-          </div>  
-      </section>
-
-      <section class="rewards">
-        <img src="img/epochrewards.png" alt="Epoch Rewards"/>
       </section>
 
       <section class="social">
@@ -220,7 +201,7 @@
         Copyright - MantisPool Network - 2020 - <a href="mailto:mantispoolcardano@gmail.com">mantispoolcardano@gmail.com</a>
       </section>
 
-    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>

@@ -4,20 +4,31 @@ body {
 	margin: 0;
 	height: 100vh;
 	font-family: 'Open Sans', sans-serif;
+	color: rgb(198,229,231);
+	/* background: rgb(17,40,60) url('./img/static_blue_network.png') no-repeat center center/cover; */
+	background: rgb(17,40,60);
+}
+
+h5 {
+	color: #fff; 
+}
+
+th, td {
+	border-bottom: 1px solid #ddd;
 }
 
 .grid-container {
 		display: grid;
-		grid-gap: 40px;
+		grid-gap: 20px;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 100px 1fr 1fr 1fr 1fr 1fr 100px 100px;
 		grid-template-areas:
 			"pic1			ticker		ticker			ticker"
 			"showcase		showcase	showcase		showcase"
-			"panel1			panel1		panel2			panel2"
+			"news			news		news			news"
+			"pool			pool		pool			pool"
 			"top10			top10		top10			top10"
 			"staking		staking		staking			staking"
-			"rewards		rewards		rewards			rewards"
 			"social			social		social			social"
 			"about	 	 	about		about			about";
 		height: 100vh;
@@ -45,17 +56,13 @@ section.showcase {
 	z-index: 2;
 }
 
-section.panel1 {
-	grid-area: panel1;
-	justify-self: end;
-	align-self: start;
+section.news {
+	grid-area: news;
 	z-index: 2;
 }
 
-section.panel2 {
-	grid-area: panel2;
-	justify-self: start;
-	align-self: start;
+section.pool {
+	grid-area: pool;
 	z-index: 2;
 }
 
@@ -66,13 +73,6 @@ section.top10 {
 
 section.staking {
 	grid-area: staking;
-	z-index: 2;
-}
-
-section.rewards {
-	grid-area: rewards;
-	justify-self: start;
-	align-self: center;
 	z-index: 2;
 }
 
@@ -88,18 +88,9 @@ section.about {
 	grid-area: about;
 	justify-self: center;
 	align-self: start;
-	color: rgb(17,40,60);
 	z-index: 2;
 }
  
- 
-.img-mantis {
-  width: 100px;
-  height: 100px;
-  /* object-fit: cover; */
-  border-radius: 50%;
-}
-
 .img-cardano {
   width: 100px;
   height: 100px;
@@ -119,7 +110,7 @@ section.about {
 .video-container video {
 	min-width: 100%;
 	min-height: 100%;
-  position: absolute;
+    position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
