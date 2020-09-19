@@ -53,8 +53,6 @@ section.ticker {
 
 section.showcase {
 	grid-area: showcase;
-	justify-self: center;
-	align-self: start;
 	text-align: center;
 	color: #fff;
 	z-index: 2;
