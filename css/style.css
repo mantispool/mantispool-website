@@ -31,7 +31,7 @@ th, td {
 			"showcase		showcase	showcase		showcase"
 			"news			news		news			news"
 			"pool			pool		pool			pool"
-			"top10			top10		top10			top10"
+			"awards			awards		awards			awards"
 			"staking		staking		staking			staking"
 			"social			social		social			social"
 			"about	 	 	about		about			about";
@@ -68,8 +68,8 @@ section.pool {
 	z-index: 2;
 }
 
-section.top10 {
-	grid-area: top10;
+section.awards {
+	grid-area: awards;
 	z-index: 2;
 }
 
@@ -102,4 +102,8 @@ section.about {
 	width: 120px;
 	height: 120px;
 }
-  
+
+.img-award {
+	width: 300px;
+	height: 380px;
+}
