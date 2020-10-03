@@ -104,49 +104,38 @@
       </section>  
 
       <section class="staking">
+
         <h5>Staking (delegating) ada</h5>
-        <p>
-        Many delegators think delegating to large pools (having large amounts of stake delegated) and producing many blocks is more rewarding than delegating to small pools (having small amounts of stake delegated) and producing a few blocks. Without these delegators being aware about how the reward mechanism works, they might take decisions which result in getting less rewards instead of getting more rewards. To enable delegators to take the right decisions in regard to delegating to a stakepool, we invite you to proceed reading.
-        </p>
 
         <h6>Epoch</h6>
         <p>A period of 5 days.</p>
          
         <h6>Pledge</h6>
-        <p>The amount of ada the owners of the stakepool have to delegate to their own pool. The pledge setting is set during stakepool registration by the owners and the owners have to honor that pledge amount by delegating that amount to their own pool. If they do not honor the pledge, the rewards will decrease in comparison with when the pledge is honored. The influence factor of the pledge is currently set to 0,3 and is rather small.
+        <p>The amount of ada the owners of the stakepool have to delegate to their own pool. The pledge setting is set during stakepool registration by the owners and the owners have to honor that pledge amount by delegating that amount to their own pool. If they do not honor the pledge then pool rewards decrease. The influence factor of the pledge is currently set to 0.3 so it is currently rather small. This influence factor will increase in value once full decentraliztion occurs.
         </p>
 
-        <h6>Active stake versus live stake</h6>
-        <p>Active stake means stake based upon which the rewards for the pool will be calculated. Live stake means stake which is currently delegated to the pool.
+        <h6>Active Stake versus Live Stake</h6>
+        <p>Active Stake means stake based upon which the rewards for the pool will be calculated. Live Stake means stake which is currently delegated to the pool.
         </p>
-        <p>Example: Let's say that we are now in epoch 208. Both active stake and live stake of the pool is 0. Now delegators start delegating to the pool (in epoch 208). In total 100.000 ada is staked to the pool at the end of epoch 208/beginning op epoch 209. Live stake is now 100.000 for the pool. This stake becomes active stake in epoch 210. For stake to become active stake it takes current epoch (208) + 1 full epoch (209), so active stake in epoch 210 is 100.000 ada in this example. During epoch 209 delegators might decide to leave the pool or to join the pool in regard te delegation. One might also decrease or increase the amount of stake they delegate to the pool. This influences the live stake. So let's say that 2 delegators decided to delegate to the pool with each 20.000 ada. And one delegator delegating 30.000 ada decided to delegate ones ada to another pool, then the live stake will be 100.000 + 20.000 + 20.000 - 30.000 = 110.000 ada. If this live stake is the live stake at the end of epoch 209/beginning epoch 210, then this live stake will become active stake in epoch 212 (current epoch + 1 full epoch). In epoch 211, the active stake remains 100.000 ada, as in epoch 210.
+        <p>Example: Let's say that we are now in epoch 208. Both active stake and live stake of the pool is 0. Now delegators start delegating to the pool (in epoch 208). In total 100,000 ada is staked to the pool at the end of epoch 208. Live stake is now 100,000 for the pool. This stake becomes active stake in epoch 210. For stake to become active stake it takes current epoch (208) + 1 full epoch (209), so for this example active stake in epoch 210 is 100,000 ada. During epoch 209 delegators might decide to join or leave the pool. Let's say that 2 delegators decide to delegate to the pool each with 20,000 ada, and one delegator delegating 30,000 ada decided to move to a different pool, then the live stake will be 100,000 + 20,000 + 20,000 - 30,000 = 110,000 ada. If this live stake is the value at the end of epoch 209, then this amount will become the active stake in epoch 212 (current epoch + 1 full epoch). In epoch 211, the active stake remains 100,000 ada, as in epoch 210.
         </p>
 
         <h6>Stakepool block production and schedule</h6>
-        <p>During epoch transition (going from one epoch to the next) the block schedule is determined and the blocks are assigned to the stake pools. The number of blocks assigned to stakepools is based upon their active stake, however, there is no guarantee one or more blocks are assigned. When the blocks are going to be produced nobody knows and is completely random. Do not worry too soon if the pool hasn't produced any blocks during the first days, because it might be that the blocks are scheduled near the end of the epoch.
+        <p>During epoch transition (going from one epoch to the next) a block schedule is determined and the blocks are assigned to the stake pools. The number of blocks assigned to stakepools is based upon their active stake, however, there is no guarantee one or more blocks are assigned. When the blocks are going to be produced nobody knows and is completely random. Don't worry if the pool hasn't produced any blocks during the first couple of days because it might be that the blocks are scheduled near the end of the epoch.
         </p>
 
         <h6>Pool cost (cost per epoch) and margin</h6>
-        <p>The pool cost of a pool are the costs the pool calculates and should equal the cost the operators (owners) have to make for running the pool. Think about hardware investments, internet connection costs, labor, etc. The margin of the pool is the profit the operators (owners) grant themselves. Example: Let's say the total rewards for the pool in a particular epoch are 10.000 ada. The pool cost are set to 340 and the margin is set to 2%. First the pool costs are taken off the total rewards: 10.000 - 340 = 9660 ada. Then from that remainder the margin is taken off:  9660 - (2% of 9660) = 9466,80 ada remaining. This remaining 9466,80 ada is divided across the delegators relatively to their amount of delegated ada.
-        </p>
-
-        <h6>Selecting a pool for delegation</h6>
-        <p>Many delegators think that the height of the rewards is dependent on the number of blocks that are produced by a stakepool. This is not correct. Of course a stakepool has to produce blocks to receive rewards, however, the height of the rewards is determined by the total amount of active stake delegated to the stakepool. Based upon the total amount of active stake the pool gets, in general, blocks assigned (not always). The protocol uses a formula for assigning blocks and that number of blocks is called number of "expected" blocks. There are however some uncertainties/influencing factors, which might result in a stakepool getting more or less blocks assigned than the "expected" number of blocks.
-        </p>
-        <p>Now, if the stakepool produces the exact same number of blocks as the number of "expected" blocks, then the pool performance is 100%, which means that the pool will receive the full rewards. In case the stakepool produces less than the "expected" blocks, then the performance drops and the rewards for the pool decreases. In case the stakepool produces more than the "expected" blocks, then the performance increases as well as the rewards. Example: Let's say the "expected" blocks are 4 and the stakepool produced 2 blocks, then the performance of the stakepool is 50%. This means the rewards will decrease with 50% compared with a performance of 100%. In case the "expected" blocks are 4 and the stakepool produces 6 blocks, then the performance is 150%. This means the rewards will increase with 50% compared with a performance of 100%.
-        </p>  
-        
-        <p>Other factors also have an influence on the performance of a pool next to what is described above. If a stakepool is not performing on a technical level it might miss out on producing blocks resulting in a performance drop.
+        <p>The pool cost of a pool are the costs the pool calculates and should equal the cost the operators (owners) have to make for running the pool. Think about hardware investments, internet connection costs, labor, etc. The margin of the pool is the profit the operators (owners) grant themselves. Example: Let's say the total rewards for the pool in a particular epoch are 10,000 ada. The pool cost are set to 340 and the margin is set to 2%. First the pool costs are taken off the total rewards: 10,000 - 340 = 9,660 ada. Then from that remainder the margin is taken off:  9,660 - (2% of 9,660) = 9,466.80 ada remaining. This remaining 9,466.80 ada is divided across the delegators relatively to their percentage of delegated ada.
         </p>
 
         <h6>Reward calculation and pay outs</h6>
-        <p>Rewards are being calculated in the epoch before the epoch in which the rewards are being paid out. Example: In epoch 209 you delegated your ada to a stakepool. This delegated stake became active stake in epoch 211. The stakepool you delegated your ada to, did produce blocks, so will receive rewards, and with that, you will too. During epoch 212 the rewards will be calculated. In the beginning op epoch 213 the rewards will be paid out.
+        <p>Rewards are being calculated in the epoch before the epoch in which the rewards are being paid out. Example: In epoch 209 you delegated your ada to a stakepool. This delegated stake became active stake in epoch 211. The stakepool you delegated your ada to, did produce blocks, so will receive rewards, and with that, you will too. During epoch 212 the rewards will be calculated. In the beginning of epoch 213 the rewards will be paid out.
         </p>
 
-        <h6>Summary and note</h6>
-        <p>The rewards a delegator receives while staking is mainly dependent on the amount of ada the delegator is delegating to the stakepool and on the performance of the stakepool the delegator is delegating to, so monitoring the stakepools' performance is essential for taking the right decisions to get maximum rewards.
-        </p>
-
+        <br>
+        <h6>Here is a great graphic from our friends at CashFlow Pool that summarizes the delegation process</h6>
+        <br>
+        <img src="img/staking-schedule.jpg" alt="Cardano Staking Schedule" class="img-schedule"/>
       </section>
 
       <section class="social">
