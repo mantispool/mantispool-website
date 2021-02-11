@@ -1,5 +1,5 @@
 {
-    "how-to-implement": "in your meta.json - define *extended* with url to this (json) file - https://raw.githubusercontent.com/cardanians/adapools.org/master/example-meta.json",
+    "how-to-implement": " dabeb37c785f9212e22d0e4312275189 in your meta.json - define *extended* with url to this (json) file - https://raw.githubusercontent.com/cardanians/adapools.org/master/example-meta.json",
     "info": {
         "url_png_icon_64x64": "https://mantispool.net/img/mantispool-transparent-64.png",
         "url_png_logo": "https://mantispool.net/img/mantispool-transparent-64.png",
@@ -29,10 +29,10 @@
         "rss": ""
     },
     "my-pool-ids": {
-        "0": "54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18"
+        "0": "0d294c73cd8c6558d344155c3a5a9363aa185ed25a14717b162149e0"
     },
     "when-satured-then-recommend": {
-        "0": "54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18"
+        "0": "0d294c73cd8c6558d344155c3a5a9363aa185ed25a14717b162149e0"
     },
     "telegram-admin-handle": {
         "0": ""
