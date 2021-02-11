@@ -28,9 +28,9 @@ th, td {
 		grid-template-rows: 120px 1fr 1fr 1fr 1fr 1fr 100px 100px;
 		grid-template-areas:
 			"pic1			ticker		ticker			ticker"
+			"pool			pool		pool			pool"
 			"showcase		showcase	showcase		showcase"
 			"news			news		news			news"
-			"pool			pool		pool			pool"
 			"awards			awards		awards			awards"
 			"staking		staking		staking			staking"
 			"social			social		social			social"
@@ -53,7 +53,7 @@ section.ticker {
 
 section.showcase {
 	grid-area: showcase;
-	text-align: center;
+	/* text-align: center; */
 	color: #fff;
 	z-index: 2;
 }
