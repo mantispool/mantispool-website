@@ -1,190 +1,444 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="css/style.css">
+<html lang="en-US" dir="ltr">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>MantisPool</title>
+
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="assets/css/mycss.css" rel="stylesheet" />
+
+  </head>
+
+
+  <body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
+        <div class="container"><a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="#"><img class="d-inline-block me-3" src="assets/img/icons/logo.png" alt="" />MANTIS 1Percent Pools</a>
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
+              <li class="nav-item"><a class="nav-link fw-bold active" aria-current="page" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#how_to_stake">How to stake</a></li>
+              <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section class="py-0">
+        <div class="bg-holder" style="background-image:url(assets/img/illustrations/dot.png);background-position:left;background-size:auto;margin-top:-105px;">
+        </div>
+        <!--/.bg-holder-->
+
+        <div class="container position-relative">
+          <div class="row align-items-center">
+            <div class="col-md-5 col-lg-6 order-md-1 pt-8"><img class="img-fluid" src="assets/img/illustrations/award-mant1-1000.png" alt="" /></div>
+            <div class="col-md-7 col-lg-6 text-center text-md-start pt-5 pt-md-9">
+              <h1 class="mb-4 display-3 fw-bold">Incredibly low 1%<br class="d-block d-lg-none d-xl-block" />delegation fees</h1>
+              <p class="mt-3 mb-4 fs-1">
+                This is among the absolute lowest stake pool fees<br class="d-none d-lg-block" />
+                available and it ensures that you get the highest<br class="d-none d-lg-block" />
+                rewards from staking your ADA.<br class="d-none d-lg-block" />
+              </p>  
+              <p class="mt-3 mb-4 fs-1">
+                The stake pool cluster is securely setup, is fully<br class="d-none d-lg-block" />
+                automated and monitored 24/7. Whenever the needs<br class="d-none d-lg-block" />
+                of running the Cardano stake pools change, our<br class="d-none d-lg-block" />
+                setup will scale with the requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="py-8">
+        <div class="bg-holder" style="background-image:url(assets/img/illustrations/services-bg.png);background-position:center left;background-size:auto;">
+        </div>
+        <!--/.bg-holder-->
+
+        <div class="container-lg">
+          <div class="row justify-content-center">
+            <div class="col-3 text-center">
+              <h2 class="fw-bold">Available Staking Pools</h2>
+              <hr class="w-25 mx-auto text-dark" style="height:2px;" />
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-sm-9 col-xl-8 text-center">
+              <p>We invest in our infrastructure to provide a reliable, secure, and optimized staking pool experience. All staking pools run on modern node hardware
+                 with computing resources exceeding the recommended specifications.</br></br>
+                 Select a pool that is below 95% saturation. It is okay to be at 100%, but going higher will slightly decrease your rewards.
+                 All MANTIS pools have identical fees and performance.
+                 The current recommended pool to delegate to is MANT3 because saturation levels will change to 32M in March 2021.
+              </p>
+            </div>
+          </div>
+
+          <div class="row justify-content-center h-100 pt-7 g-4">
+
+            <!-- MANT 1 -->
+            <div class="col-sm-9 col-md-4">
+              <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
+                <div class="card-body text-center text-md-start">
+                  <div class="py-3"><img class="img-fluid" src="assets/img/illustrations/mantis-70x70.png" height="90" alt="" /></div>
+                  <div class="py-3">
+                    <h4 class="fw-bold card-title">Ticker: MANT</h4>
+                    <p class="card-text">
+                      <div>
+                        Pool Id: <a href="https://adapools.org/pool/54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18/epochs" 
+                        target="_blank">54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18</a>
+                        <button class="btn_copy" onclick="copy_poolid(1)"><i class="far fa-copy" title="Copy Pool Id to clipboard"></i></button>
+                      </div>
+                      <div>Pool margin: 1.00%</div>
+                      <div>Pledge: 500K</div>
+                      <div>Cost per epoch: 340 ADA</div>
+                      <div id="livestake_mant1"></div>
+                    </p>
+                  </div>
+                </div>
+                <div>Saturation level:</div>
+                <div id="progress_mant1">
+                  <div id="progress_mant1_text"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- MANT 2 -->
+            <div class="col-sm-9 col-md-4">
+              <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
+                <div class="card-body text-center text-md-start">
+                  <div class="py-3"><img class="img-fluid" src="assets/img/illustrations/mantis-70x70.png" height="90" alt="" /></div>
+                  <div class="py-3">
+                    <h4 class="fw-bold card-title">Ticker: MANT2</h4>
+                    <p class="card-text">
+                      <div id="mant1_pool_id">Pool Id: <a href="https://adapools.org/pool/55ef56b00435fec8ff85dd88c0ce16df755526511323039bfde555db/epochs" 
+                        target="_blank">55ef56b00435fec8ff85dd88c0ce16df755526511323039bfde555db</a>
+                        <button class="btn_copy" onclick="copy_poolid(2)"><i class="far fa-copy" title="Copy Pool Id to clipboard"></i></button>
+                      </div>
+                      <div>Pool margin: 1.00%</div>
+                      <div>Pledge: 500K</div>
+                      <div>Cost per epoch: 340 ADA</div>
+                      <div id="livestake_mant2"></div>
+                    </p>
+                  </div>
+                </div>
+                <div>Saturation level:</div>
+                <div id="progress_mant2">
+                  <div id="progress_mant2_text"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- MANT 3 -->
+            <div class="col-sm-9 col-md-4">
+              <div class="card h-100 w-100 shadow rounded-lg p-3 p-md-2 p-lg-3 p-xl-5">
+                <div class="card-body text-center text-md-start">
+                  <div class="py-3"><img class="img-fluid" src="assets/img/illustrations/new.png" height="90" alt="" />
+                    <img class="img-fluid" src="assets/img/illustrations/mantis-70x70.png" height="90" alt="" /></div>
+                  <div class="py-3">
+                    <h4 class="fw-bold card-title">Ticker: MANT3</h4>
+                    <p class="card-text">
+                      <div>Pool Id: <a href="https://adapools.org/pool/0d294c73cd8c6558d344155c3a5a9363aa185ed25a14717b162149e0/epochs" 
+                        target="_blank">0d294c73cd8c6558d344155c3a5a9363aa185ed25a14717b162149e0</a>
+                        <button class="btn_copy" onclick="copy_poolid(3)"><i class="far fa-copy" title="Copy Pool Id to clipboard"></i></button>
+                      </div>
+                      <div>Pool margin: 1.00%</div>
+                      <div>Pledge: 100K</div>
+                      <div>Cost per epoch: 340 ADA</div>
+                      <div id="livestake_mant3"></div>
+                    </p>
+                  </div>
+                </div>
+                <div>Saturation level:</div>
+                <div id="progress_mant3">
+                  <div id="progress_mant3_text"></div>
+                </div>
+              </div>
+            </div>
+
+            <p>[Note: Additional staking pools will be created when the current available pools become over saturated]</p>
+
+          </div>
+      </section>
+
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+        <section class="py-6 py-lg-8" id="how_to_stake">
+          <div class="bg-holder" style="background-image:url(assets/img/illustrations/dot.png);background-position:left;background-size:auto;margin-top:-105px;">
+          </div>
+          <div class="bg-holder" style="background-image:url(assets/img/illustrations/services-bg.png);background-position:center left;background-size:auto;">
+          </div>
   
-  <title>MANTIS 1PERCENT</title> 
-</head>
+          <div class="container">
+            <div class="row g-xl-0 align-items-center">
+              <div class="col-md-6 order-md-1 text-md-end"><img class="img-fluid mb-5 mb-md-0" src="assets/img/illustrations/cardano-coins.png" width="480" alt="" /></div>
+              <div class="col-md-6 text-center text-md-start order-md-0">
+                <h2 class="fw-bold lh-base">How to stake (delegate)</h2>
+                <hr class="text-dark mx-auto mx-md-0" style="height:2px;width:50px" />
+                <p class="pt-3">
+                  Delegation is the process by which ada holders delegate the stake associated with their ada to a stake pool. It allows ada holders 
+                  that do not have the skills or desire to run a node to participate in the network and be rewarded in proportion to the amount of stake 
+                  delegated.
+                </p>
+                <p class="pt-3">
+                  You maintain custody and control of your ada at all times. Stake pool operators never have access to your delegated ada. There are no 
+                  lockup periods and you can transfer your ada at any time. Delegation is supported by <a href="https://daedaluswallet.io/" 
+                  target="_blank">Daedalus</a> - a full-node wallet developed by IOHK - and <a href="https://yoroi-wallet.com/#/" 
+                  target="_blank">Yoroi</a>: a browser-based wallet developed by EMURGO.
+                </p>
+                <p class="pt-3">
+                  The procedures for delegation using each wallet is a little different but both allow you to search for the stake pool
+                  using either a ticker symbol (eg. MANT, MANT2, MANT3), or via the Pool Id (the 56 alpha-numeric string). Once you have
+                  delegated your ada, you can simply sit back and relax knowing that MANTIS is providing you with the best staking
+                  experience and rewards.
+                </p>  
 
-<body>
+                <a class="btn btn-lg btn-primary rounded-pill hover-top" href="https://cardano.org/stake-pool-delegation/" target="_blank" role="button">Learn more</a>
+                
+              </div>
+            </div>
+          </div><!-- end of .container-->
+  
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
 
-  <div class="grid-container">
 
-      <section class="pic1">
-        <img src="img/mantispool-transparent-webpage.png" alt="MantisPool Logo" class="img-mantispool" />
+      <section class="py-6 py-lg-8">
+        <div class="bg-holder" style="background-image:url(assets/img/illustrations/dot.png);background-position:right bottom;background-size:auto;margin-top:50px;">
+        </div>
+        <div class="bg-holder" style="background-image:url(assets/img/illustrations/dot.png);background-position:left;background-size:auto;margin-top:-105px;">
+        </div>
+        <!--/.bg-holder-->
+
+        <div class="container">
+          <div class="row g-xl-0 align-items-center">
+            <div class="col-md-6"><img class="img-fluid mb-5 mb-md-0" src="assets/img/illustrations/cardano-coins.png" width="480" alt="" /></div>
+            <div class="col-md-6 text-center text-md-start">
+              <h2 class="fw-bold lh-base">Our mission and commitment<br />to you</h2>
+              <hr class="text-dark mx-auto mx-md-0" style="height:2px;width:50px" />
+              <p class="pt-3">
+                Our delegators are the reason we exist. Everything we do in every capacity is aimed at going above and beyond the expectations of our delegators. 
+                The best relationships are always based on trust, and we will do everything we can to earn your trust through offering the best, most consistent 
+                and reliable, staking experience in the Cardano network. 
+              </p>
+              <p class="pt-3">
+                Not every Stake Pool is created equal. As an ada delegator, you deserve stake pool excellence in order to receive the most consistent and long term 
+                series of rewards. Choose from any of the three MANTIS 1Percent pools and be assured of the best possible staking experience. In order to avoid 
+                delegator reward dilution, we will continually add more pools to the MANTIS family whenever a pool reaches saturation levels. 
+              </p>    
+              <p class="pt-3">
+                Stake with confidence knowing that we handle all of the hard geeky stuff on the technology backend. We pour our time, money, and energy into 
+                building the best stake pools available. You won't see us wasting needlessly on flashy web design or social media campaigns. We believe in our 
+                product and we know that it delivers results. 
+              </p>    
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section class="ticker">
-          <script defer src="https://www.livecoinwatch.com/static/lcw-widget.js"></script> <div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="coins" lcw-marquee-2="movers" lcw-marquee-items="10" ></div>
+
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+      <section class="py-6 py-lg-8">
+        <div class="bg-holder" style="background-image:url(assets/img/illustrations/services-bg.png);background-position:center left;background-size:auto;">
+        </div>
+
+        <div class="container">
+          <div class="row g-xl-0 align-items-center">
+            <div class="col-md-6 order-md-1 text-md-end"><img class="img-fluid mb-5 mb-md-0" src="assets/img/illustrations/cardano-coins.png" width="480" alt="" /></div>
+            <div class="col-md-6 text-center text-md-start order-md-0">
+              <h2 class="fw-bold lh-base">Believe in the MANTIS 1Percent advantage!</h2>
+              <hr class="text-dark mx-auto mx-md-0" style="height:2px;width:50px" />
+              <!-- <p class="pt-3">Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely</p> -->
+              <ul class="fa-ul">
+                <li><span class="fa-li"><i class="far fa-check-square"></i></span>Professionally run with over 30 years of IT experience.</li>
+                <li><span class="fa-li"><i class="far fa-check-square"></i></span>Here since the very beginning - Stake pool created at the the start of the Cardano Shelley era (Wednesday 29th July 2020).</li>
+                <li><span class="fa-li"><i class="far fa-check-square"></i></span>Experienced - Operated two successful pools on the HTN test net.</li>
+                <li><span class="fa-li"><i class="far fa-check-square"></i></span>100% dedicated to the decentralization of the Cardano network.</li>
+                <li><span class="fa-li"><i class="far fa-check-square"></i></span>Long-term operating plan. Invested in node infrastructure and upgrades.</li>
+                <li><span class="fa-li"><i class="far fa-check-square"></i></span>Cloud based Linux servers located in military grade secure data centers (United States and Germany).</li>
+                <li><span class="fa-li"><i class="far fa-check-square"></i></span>24/7 operation with 99.9% uptime performance (Cardano Node Version 1.25.1).</li>
+                <li><span class="fa-li"><i class="far fa-check-square"></i></span>You maintain custody and control of your ADA at all times.</li>
+                <li><span class="fa-li"><i class="far fa-check-square"></i></span>Stake pool operators never have access to your delegated ADA.</li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- end of .container-->
+
       </section>
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
 
 
-      <section class="pool">
-        <h1>MANTIS 1PERCENT POOLS</h1>
-        <h5>Incredibly Low 1% delegation fee</h5>
-        <p>
-          A big THANK-YOU to everyone who has delegated to the MANTIS pools! You folks are legends and rock stars and your loyalty 
-          to MANTIS is greatly appreciated every single day. 
-        </p>
-        </br>  
+      <!-- ============================================-->
+      <!-- <section> begin ============================-->
+        <section class="py-6 py-lg-8">
+          <div class="bg-holder" style="background-image:url(assets/img/illustrations/services-bg.png);background-position:center left;background-size:auto;">
+          </div>
+          <div class="bg-holder" style="background-image:url(assets/img/illustrations/dot.png);background-position:left;background-size:auto;margin-top:-105px;">
+          </div>
+  
+          <div class="container">
+            <div class="row g-xl-0 align-items-center" id="faq">
+                <h2 class="fw-bold lh-base">Frequently Asked Questions</h2>
+                <p class="pt-3">Our dedicated patient engagement app and web portal allow you to access information instantaneously (no tedeous form, long calls, or administrative hassle) and securely</p>
 
-        <h5>Our Mission and Commitment to You</h5>
-        <p>
-          Our delegators are the reason we exist. Everything we do in every capacity is aimed at going above and beyond the
-          expectations of our delegators. The best relationships are always based on trust, and we will do everything we can to earn your trust
-          through offering the best, most consistent and reliable, staking experience in the Cardano network.
-        </p>
-        <p>
-          MANTIS invests in our infrastructure so that we remain the destination of choice for all Cardano ADA holders who require a reliable, secure, 
-          and optimized staking pool experience. We ensure that all staking pools run on optimized node hardware with computing resources far exceeding 
-          the recommended specifications. We are honoured and humbled to be part of the Cardano blockchain platform and to be able to contribute our
-          talents in securing the underlying proof of stake technology with strong and reliable MANTIS 1PERCENT pools.
-        </p>
-          Together we will change the world and help bring financial freedom to millions of people.
-        </p> 
-        </br> 
+                <p class="accordion">Q1. What is a stake pool?</p>
+                <div class="panel">
+                  <p>Stake pools are run by stake pool operators. These are network participants with the skills to reliably ensure consistent uptime of a 
+                  node, which is essential in ensuring the success of the Ouroboros protocol and the Cardano network as a whole.</p>
 
-        <h5>Believe in the MANTIS 1PERCENT advantage!</h5>
-        <p>
-          Not every Stake Pool is created equal. As an ADA delegator, you deserve the best stake pool in order to receive the most consistent
-          and long term series of rewards. Choose from any of the three MANTIS 1PERCENT pools and be assured of the best possible staking experience. 
-          In order to avoid delegator reward dilution, we will continually add more pools to the MANTIS family whenever a pool reaches saturation 
-          levels. Stake with confidence knowing that we handle all of the hard geeky stuff on the technology backend. We pour our time, money, and energy
-          into building the best stake pools available. You won't see us wasting needlessly on flashy web design or social media campaigns. We believe 
-          in our product and we know that it delivers results.
-        </p>
-        <ul class="fa-ul">
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Here since the very beginning - Stake pool created at the the start of the Cardano Shelley era (Wednesday 29th July 2020).</li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Experienced - Operated two successful pools on the HTN test net.</li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>100% dedicated to the decentralization of the Cardano network.</li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Long-term operating plan. Invested in node infrastructure and upgrades.</li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Cloud based Linux servers located in military grade secure data centers (United States and Germany).</li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>24/7 operation with 99.9% uptime performance (Cardano Node Version 1.25.1).</li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Professionally run with over 30 years of IT experience.</li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>You maintain custody and control of your ADA at all times.</li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Stake pool operators never have access to your delegated ADA.</li>
-          <li><span class="fa-li"><i class="far fa-square"></i></span>Delegate and relax. Your staking rewards auto-compound.</li>
-        </ul>
-      </section>
+                  <p>The protocol uses a probabilistic mechanism to select a leader for each slot, who will be expected to create the next block in the 
+                  chain. The chance of a stake pool node being selected as slot leader increases proportionately to the amount of stake delegated to that 
+                  node. Each time a stake pool node is selected as a slot leader and successfully creates a block, it receives a reward, which is shared 
+                  with the pool proportionate to the amount each member has delegated. Stake pool operators can deduct their running costs from the awarded 
+                  ada, as well as specify a profit margin for providing the service.</p>
+                </div>
+
+                <p class="accordion">Q2. What is stake pool saturation?</p>
+                <div class="panel">
+                  <p>Saturation is a term used to indicate that a particular stake pool has more stake delegated to it than is ideal for the network, and once
+                  a pool reaches the point of saturation it will offer diminishing rewards. The saturation mechanism was designed to prevent centralization 
+                  by encouraging delegators to delegate to different stake pools, and operators to set up alternative pools so that they can continue earning 
+                  maximum rewards. Saturation, therefore, exists to preserve the interests of both ada holders delegating their stake and stake pool operators.</p>
+
+                  <p>The goal is to avoid any single pool becoming too large – thereby disincentivizing delegation to other pools – and receiving a disproportionate 
+                  amount of the rewards. The health of the network is partly determined by having a high number of active stake pools with a balanced amount of 
+                  stake delegated to them. The more numerous and geographically diverse the network’s pools, the better.</p>
+                </div>
+
+                <p class="accordion">Q3. Why should I not select a 0% pool?</p>
+                <div class="panel">
+                  <p>It sounds tempting to go for the lowest possible fee, but just like very cheap items on eBay, it’s rarely worth it.</p>
+
+                  <p>In order for a stake pool to generate the maximum rewards over time, you need a professional and sophisticated setup. You need to make 
+                  sure that the pools are highly connected to the network, that the hardware is adequate, that the internet connection is optimal, that 
+                  the software is configured correctly and that the pool software is updated frequently. You need to build redundancy and automation, to 
+                  have multiple internet connections, to have UPS backup power for the hardware and protect against attacks. You need a high level of 
+                  automation and monitoring, to always keep the pools running perfectly, and in case of any breakdown, have a backup server standing by, 
+                  that will automatically take over.</p>
+                  
+                  <p>The income from a 0% pool is simply not enough to cover the expense of the above mentioned setup. For this reason, the 0% pools do not 
+                  have this kind of setup, but instead run a much simpler operation. This means that they will perform worse over time, and hence pay less 
+                  rewards. If you do the math, a 0% pool will give you worse rewards, even though it looks better on paper.</p>
+                  
+                  <p>You risk having the pool operator raise the fees after they’ve attracted enough stake, or having the pool simply shut down because it’s 
+                  not profitable. You don’t want to constantly have to check if the pool is still at 0% fee and still running, and risk staking to a dead 
+                  pool or suddenly paying a much higher fee.</p>
+                  
+                  <p>Pools with 0% fee are not incentivised to perform their best. The operator only makes money from the first block each epoch, and he then 
+                  has no incentive to keep the pools performing well. There is no reason for him to make sure the rewards are at the absolute max, since 
+                  it means extra costs for him, but no extra income. A pool with 1% fee has a great incentive to make sure the pools are always at their 
+                  very max performance, and is willing to invest in it.</p>
+
+                </div>
+                
+                <p class="accordion">Q4. Will the ADA rewards I earn be added to my delegated stake?</p>
+                <div class="panel">
+                  Yes. Rewards earned accrue with your original stake. When rewards are received, the balance of your reward account increases – and, 
+                  consequently, the delegated stake is increased. This all happens automatically so there is nothing manually that you need to do.
+                </div>
+
+                <p class="accordion">Q5. Which red flags should I look out for, when loooking for a pool?</p>
+                <div class="panel">
+                  <p>There are many factors you should look out for, that indicates that a pool isn’t the best choice. Among these are:</p>
+
+                  <p>-Pools with 0% fee (discussed in “Why should I not select a 0% pool” above)</p>
+                  
+                  <p>-Pools with pledge below 50k ADA (Signals that they might not be serious about their operation, or have confidence in themselves).</p>
+                  
+                  <p>-Pools that haven’t produced blocks yet (They might simply be new, but this can be a sign of bad performance).</p>
+                  
+                  <p>-Pools without a website or option to contact them (Signals they might not run a serious operation)</p>
+
+                </div>
+                
+            </div>
+          </div><!-- end of .container-->
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+  
 
 
-      <section class="showcase">
-        <h5>IMPORTANT MESSAGE:</h5>
-          <p>The Cardano K parameter will change to K=1000 in March 2021 resulting in pool saturation levels reducing from 65M to 30M+. 
-             By that time, it is important that the level of delegation (Active Stake) across all three MANTIS pools be in the 30M to 35M range. If you are already 
-             delegated to MANT you can move to MANT2 or MANT3 and still earn rewards from MANT while you wait for your new delegation 
-             to become active. Interestingly, if you have a large amount of ADA to delegate to MANT3 then you will pretty much have access to almost 
-             all of that pool's rewards while the number of delegators in the pool remains low.
-          </p>
-        
-        <iframe width="500" height="317" frameborder="0" src="https://js.adapools.org/widget.html?pool=54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18&whitelabel=true"><a href="https://adapools.org/pool/54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18">Detail</a></iframe>
-        <iframe width="500" height="317" frameborder="0" src="https://js.adapools.org/widget.html?pool=55ef56b00435fec8ff85dd88c0ce16df755526511323039bfde555db&whitelabel=true"><a href="https://adapools.org/pool/55ef56b00435fec8ff85dd88c0ce16df755526511323039bfde555db">Detail</a></iframe> 
-        <iframe width="500" height="317" frameborder="0" src="https://js.adapools.org/widget.html?pool=0d294c73cd8c6558d344155c3a5a9363aa185ed25a14717b162149e0&whitelabel=true"><a href="https://adapools.org/pool/0d294c73cd8c6558d344155c3a5a9363aa185ed25a14717b162149e0">Detail</a></iframe>      
-      </section>
+
+      <section class="py-6 pt-7 bg-primary-gradient">
+        <!-- <div class="bg-holder" style="background-image:url(assets/img/illustrations/dot.png);background-position:left bottom;background-size:auto;filter:contrast(1.5);">
+        </div> -->
+        <!--/.bg-holder-->
+
+        <!-- <div class="bg-holder" style="background-image:url(assets/img/illustrations/dot-2.png);background-position:right top;background-size:auto;margin-top:-75px;">
+        </div> -->
+        <!--/.bg-holder-->
+
+        <div class="container" id="contact">
+          <div class="row">
+            <div>
+                <p class="fw-bold fs-1 text-light">MANTIS Pool Network - 2020-2021<br class="d-none d-lg-block" />
+                 <a class="fw-normal fs-0 text-light" href="mailto:mantispoolcardano@gmail.com">mantispoolcardano@gmail.com</a>
+              </p>
+            </div>
+            <p></p>
+            <p>  
+              <a href="https://twitter.com/MantisPool" target="_blank"><i class="fab fa-twitter fa-3x text-light"></i></a>
+              <a href="https://t.me/CardanoStakePoolWorkgroup" target="_blank"><i class="fab fa-telegram fa-3x text-light"></i></a>
+              <a href="https://www.reddit.com/user/MantisPool/" target="_blank"><i class="fab fa-reddit fa-3x text-light"></i></a>
+              <a href="https://www.facebook.com/mantiscardano" target="_blank"><i class="fab fa-facebook fa-3x text-light"></i></a>
+              <a href="https://www.youtube.com/channel/UCKs8wCv_Fda8IKdIi2q1rWw?view_as=subscriber" target="_blank"><i class="fab fa-youtube fa-3x text-light"></i></a> 
+            </p>  
+          </div>
       
-
-      <section class="news">
-          <h5>How much Rewards did I earn?</h5>
-          <ul class="fa-ul">
-            <li><span class="fa-li"><i class="far fa-square"></i></span>
-              It can take anywhere from 15 to 20 days for your rewards to appear when you first delegate to a pool or re-delegate your existing stake to a different pool.
-              <a target="_blank" rel="noopener noreferrer" href="https://cardano-community.github.io/support-faq/#/rewards">click here to read the FAQ about Reward/Delegation.</a>
-            </li>
-            <li><span class="fa-li"><i class="far fa-square"></i></span>
-              To view your past rewards and get an estimate of your current rewards, 
-              <a target="_blank" rel="noopener noreferrer" href="https://pooltool.io/pool/54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18/delegators">click here to view the MANTIS delegator list </a>
-              <a target="_blank" rel="noopener noreferrer" href="https://pooltool.io/pool/55ef56b00435fec8ff85dd88c0ce16df755526511323039bfde555db/delegators">, MANTIS #2 delegator list </a>
-              <a target="_blank" rel="noopener noreferrer" href="https://pooltool.io/pool/0d294c73cd8c6558d344155c3a5a9363aa185ed25a14717b162149e0/delegators">, or the MANTIS #3 delegator list. </a>
-              Find your wallet address in the delegator list and then click on the blue/white arrow in the last column on the right.<br>
-            </li>
-            <li><span class="fa-li"><i class="far fa-square"></i></span>
-              For an overview of MANTIS performance, epoch stats and rewards, <a target="_blank" rel="noopener noreferrer" href="https://cardanoscan.io/pool/54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18">click here for cardanoscan overview.</a>
-            </li>
-            <li><span class="fa-li"><i class="far fa-square"></i></span>
-              For an overview of MANTIS #2 performance, epoch stats and rewards, <a target="_blank" rel="noopener noreferrer" href="https://cardanoscan.io/pool/55ef56b00435fec8ff85dd88c0ce16df755526511323039bfde555db">click here for cardanoscan overview.</a>
-            </li>
-            <li><span class="fa-li"><i class="far fa-square"></i></span>
-              For an overview of MANTIS #3 performance, epoch stats and rewards, <a target="_blank" rel="noopener noreferrer" href="https://cardanoscan.io/pool/0d294c73cd8c6558d344155c3a5a9363aa185ed25a14717b162149e0">click here for cardanoscan overview.</a>
-            </li>
-          </ul>
-        
-          </p>
-  
+        </div>
       </section>
 
-      <section class="awards">
-        <img src="img/first-block.png" alt="MantisPool first Block" class="img-award"/>
-        <img src="img/10-blocks.png" alt="MantisPool ten blocks" class="img-award"/>
-        <img src="img/100-blocks.png" alt="MantisPool one hundred blocks" class="img-award"/>
-        <img src="img/mant-thousand-blocks.png" alt="MantisPool one thousand blocks" class="img-award"/>
-        <br>
-        <img src="img/mant2-first-block.png" alt="MantisPool2 first Block" class="img-award"/>
-        <img src="img/mant2-ten-blocks.png" alt="MantisPool2 ten blocks" class="img-award"/>
-        <br>
-        <img src="img/mant3-first-block.png" alt="MantisPool3 first Block" class="img-award"/>
-      </section>  
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
 
-      <section class="staking">
 
-        <h5>Staking (delegating) ada</h5>
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/myscripts.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
-        <h6>Epoch</h6>
-        <p>A period of 5 days.</p>
-         
-        <h6>Pledge</h6>
-        <p>The amount of ada the owners of the stakepool have to delegate to their own pool. The pledge setting is set during stakepool registration by the owners and the owners have to honor that pledge amount by delegating that amount to their own pool. If they do not honor the pledge then pool rewards decrease. The influence factor of the pledge is currently set to 0.3 so it is currently rather small. This influence factor will increase in value once full decentraliztion occurs.
-        </p>
-
-        <h6>Active Stake versus Live Stake</h6>
-        <p>Active Stake means stake based upon which the rewards for the pool will be calculated. Live Stake means stake which is currently delegated to the pool.
-        </p>
-        <p>Example: Let's say that we are now in epoch 208. Both active stake and live stake of the pool is 0. Now delegators start delegating to the pool (in epoch 208). In total 100,000 ada is staked to the pool at the end of epoch 208. Live stake is now 100,000 for the pool. This stake becomes active stake in epoch 210. For stake to become active stake it takes current epoch (208) + 1 full epoch (209), so for this example active stake in epoch 210 is 100,000 ada. During epoch 209 delegators might decide to join or leave the pool. Let's say that 2 delegators decide to delegate to the pool each with 20,000 ada, and one delegator delegating 30,000 ada decided to move to a different pool, then the live stake will be 100,000 + 20,000 + 20,000 - 30,000 = 110,000 ada. If this live stake is the value at the end of epoch 209, then this amount will become the active stake in epoch 212 (current epoch + 1 full epoch). In epoch 211, the active stake remains 100,000 ada, as in epoch 210.
-        </p>
-
-        <h6>Stakepool block production and schedule</h6>
-        <p>During epoch transition (going from one epoch to the next) a block schedule is determined and the blocks are assigned to the stake pools. The number of blocks assigned to stakepools is based upon their active stake, however, there is no guarantee one or more blocks are assigned. When the blocks are going to be produced nobody knows and is completely random. Don't worry if the pool hasn't produced any blocks during the first couple of days because it might be that the blocks are scheduled near the end of the epoch.
-        </p>
-
-        <h6>Pool cost (cost per epoch) and margin</h6>
-        <p>The pool cost of a pool are the costs the pool calculates and should equal the cost the operators (owners) have to make for running the pool. Think about hardware investments, internet connection costs, labor, etc. The margin of the pool is the profit the operators (owners) grant themselves. Example: Let's say the total rewards for the pool in a particular epoch are 10,000 ada. The pool cost are set to 340 and the margin is set to 2%. First the pool costs are taken off the total rewards: 10,000 - 340 = 9,660 ada. Then from that remainder the margin is taken off:  9,660 - (2% of 9,660) = 9,466.80 ada remaining. This remaining 9,466.80 ada is divided across the delegators relatively to their percentage of delegated ada.
-        </p>
-
-        <h6>Reward calculation and pay outs</h6>
-        <p>Rewards are being calculated in the epoch before the epoch in which the rewards are being paid out. Example: In epoch 209 you delegated your ada to a stakepool. This delegated stake became active stake in epoch 211. The stakepool you delegated your ada to, did produce blocks, so will receive rewards, and with that, you will too. During epoch 212 the rewards will be calculated. In the beginning of epoch 213 the rewards will be paid out.
-        </p>
-
-        <br>
-        <h6>Here is a great graphic from our friends at CashFlow Pool that summarizes the delegation process</h6>
-        <br>
-        <img src="img/staking-schedule.jpg" alt="Cardano Staking Schedule" class="img-schedule"/>
-      </section>
-
-      <section class="social">
-        <a href="https://twitter.com/MantisPool"><i class="fab fa-twitter fa-3x teal-text"></i></a>
-        <a href="https://t.me/CardanoStakePoolWorkgroup"><i class="fab fa-telegram fa-3x teal-text"></i></a>
-        <a href="https://www.reddit.com/user/MantisPool/"><i class="fab fa-reddit fa-3x teal-text"></i></a>
-        <a href="https://www.facebook.com/mantiscardano"><i class="fab fa-facebook fa-3x teal-text"></i></a>
-        <a href="https://www.youtube.com/channel/UCKs8wCv_Fda8IKdIi2q1rWw?view_as=subscriber"><i class="fab fa-youtube fa-3x teal-text"></i></a> 
-      </section>
-
-      <section class="about">
-        <i class="far fa-copyright"></i>
-        Copyright - MANTIS Pool Network - 2020-2021 - <a href="mailto:mantispoolcardano@gmail.com">mantispoolcardano@gmail.com</a>
-      </section>
-
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
+  </body>
 
 </html>
