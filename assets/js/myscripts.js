@@ -27,6 +27,12 @@ function altercontent(){
         saturation_percent = saturationPercentage(liveStake)
         livestake_mant1.innerHTML = "Livestake: " + liveStakeString(liveStake);
 
+        // MANT1 Delegators
+        delegators_mant1.innerHTML = "Delegators: " +out.data["delegators"];
+
+        // MANT1 Lifetime Blocks
+        lifetime_blocks_mant1.innerHTML = "Lifetime Blocks: " + (parseInt(out.data["blocks_epoch"]) + parseInt(out.data["blocks_lifetime"]));
+
         // MANT1 ProgressBar
         var elem = document.getElementById("progress_mant1_text");
         var width = saturation_percent;
@@ -45,6 +51,12 @@ function altercontent(){
         saturation_percent = saturationPercentage(liveStake)
         livestake_mant2.innerHTML = "Livestake: " + liveStakeString(liveStake);
 
+        // MANT2 Delegators
+        delegators_mant2.innerHTML = "Delegators: " +out.data["delegators"];
+
+        // MANT2 Lifetime Blocks
+        lifetime_blocks_mant2.innerHTML = "Lifetime Blocks: " + (parseInt(out.data["blocks_epoch"]) + parseInt(out.data["blocks_lifetime"]));
+
         // MANT2 ProgressBar
         var elem = document.getElementById("progress_mant2_text");
         var width = saturation_percent;
@@ -62,6 +74,12 @@ function altercontent(){
         liveStake = out.data["total_stake"] / 1000000 
         saturation_percent = saturationPercentage(liveStake)
         livestake_mant3.innerHTML = "Livestake: " + liveStakeString(liveStake);
+
+        // MANT3 Delegators
+        delegators_mant3.innerHTML = "Delegators: " +out.data["delegators"];
+
+        // MANT3 Lifetime Blocks
+        lifetime_blocks_mant3.innerHTML = "Lifetime Blocks: " + (parseInt(out.data["blocks_epoch"]) + parseInt(out.data["blocks_lifetime"]));
 
         // MANT3 ProgressBar
         var elem = document.getElementById("progress_mant3_text");
