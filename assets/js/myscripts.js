@@ -9,7 +9,7 @@ function liveStakeString(liveStake){
     return (liveStake / 1000000).toFixed(2) + 'M';
   } else {
     return (liveStake / 1000).toFixed(2) + 'K';
-  }    
+  }
 }
 
 function altercontent(){
@@ -23,7 +23,7 @@ function altercontent(){
     .then((out) => {
         // MANT1 LiveStake
         // 60503647527641
-        liveStake = out.data["total_stake"] / 1000000 
+        liveStake = out.data["total_stake"] / 1000000
         saturation_percent = saturationPercentage(liveStake)
         livestake_mant1.innerHTML = "Livestake: " + liveStakeString(liveStake);
 
@@ -37,7 +37,7 @@ function altercontent(){
         var elem = document.getElementById("progress_mant1_text");
         var width = saturation_percent;
         elem.style.width = width + "%";
-        elem.innerHTML = width + "%";      
+        elem.innerHTML = width + "%";
     }).catch(err => console.error(err));
 
 
@@ -47,7 +47,7 @@ function altercontent(){
     .then(res => res.json())
     .then((out) => {
         // MANT2 LiveStake
-        liveStake = out.data["total_stake"] / 1000000 
+        liveStake = out.data["total_stake"] / 1000000
         saturation_percent = saturationPercentage(liveStake)
         livestake_mant2.innerHTML = "Livestake: " + liveStakeString(liveStake);
 
@@ -61,41 +61,41 @@ function altercontent(){
         var elem = document.getElementById("progress_mant2_text");
         var width = saturation_percent;
         elem.style.width = width + "%";
-        elem.innerHTML = width + "%";      
+        elem.innerHTML = width + "%";
     }).catch(err => console.error(err));
 
 
     // MANT3
     // Retrieve the adapools json for MANT3
-    fetch('https://js.adapools.org/pools/0d294c73cd8c6558d344155c3a5a9363aa185ed25a14717b162149e0/summary.json')
-    .then(res => res.json())
-    .then((out) => {
-        // MANT3 LiveStake
-        liveStake = out.data["total_stake"] / 1000000 
-        saturation_percent = saturationPercentage(liveStake)
-        livestake_mant3.innerHTML = "Livestake: " + liveStakeString(liveStake);
+    // fetch('https://js.adapools.org/pools/0d294c73cd8c6558d344155c3a5a9363aa185ed25a14717b162149e0/summary.json')
+    // .then(res => res.json())
+    // .then((out) => {
+    //     // MANT3 LiveStake
+    //     liveStake = out.data["total_stake"] / 1000000
+    //     saturation_percent = saturationPercentage(liveStake)
+    //     livestake_mant3.innerHTML = "Livestake: " + liveStakeString(liveStake);
 
-        // MANT3 Delegators
-        delegators_mant3.innerHTML = "Delegators: " +out.data["delegators"];
+    //     // MANT3 Delegators
+    //     delegators_mant3.innerHTML = "Delegators: " +out.data["delegators"];
 
-        // MANT3 Lifetime Blocks
-        lifetime_blocks_mant3.innerHTML = "Lifetime Blocks: " + (parseInt(out.data["blocks_epoch"]) + parseInt(out.data["blocks_lifetime"]));
+    //     // MANT3 Lifetime Blocks
+    //     lifetime_blocks_mant3.innerHTML = "Lifetime Blocks: " + (parseInt(out.data["blocks_epoch"]) + parseInt(out.data["blocks_lifetime"]));
 
-        // MANT3 ProgressBar
-        var elem = document.getElementById("progress_mant3_text");
-        var width = saturation_percent;
-        elem.style.width = width + "%";
-        elem.innerHTML = width + "%";      
-    }).catch(err => console.error(err));
+    //     // MANT3 ProgressBar
+    //     var elem = document.getElementById("progress_mant3_text");
+    //     var width = saturation_percent;
+    //     elem.style.width = width + "%";
+    //     elem.innerHTML = width + "%";
+    // }).catch(err => console.error(err));
 
 }
 
 function copy_poolid(pool_num){
 
     // console.log('Copied Text')
-    
+
     var copyText = "";
-    
+
     if(pool_num == 1) {
         copyText = "54f5f2618a3da4bb0b384895d8f3922189acbb8e9637201ebb26bc18";
     }
@@ -117,7 +117,7 @@ function copy_poolid(pool_num){
 
 // this one toggles only one open at a time
 // Ref  - http://stackoverflow.com/questions/37745154/only-open-one-accordion-tab-at-one-time
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener("DOMContentLoaded", function(event) {
 
 var acc = document.getElementsByClassName("accordion");
 var panel = document.getElementsByClassName('panel');
