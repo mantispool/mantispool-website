@@ -1,8 +1,8 @@
 {
     "how-to-implement": "in your meta.json - define *extended* with url to this (json) file - https://raw.githubusercontent.com/cardanians/adapools.org/master/example-meta.json",
     "info": {
-        "url_png_icon_64x64": "https://mantispool.net/img/mantispool-transparent-64.png",
-        "url_png_logo": "https://mantispool.net/img/mantispool-transparent-64.png",
+        "url_png_icon_64x64": "https://mantispool.net/assets/img/icons/logo-60x60.png",
+        "url_png_logo": "https://mantispool.net/assets/img/icons/logo-60x60.png",
         "location": "United States and Germany",
         "social": {
             "twitter_handle": "MantisPool",
@@ -14,7 +14,7 @@
             "github_handle": ""
         },
         "company": {
-            "name": "MANTIS 1PERCENT",
+            "name": "MANTIS 1PERCENT TWO",
             "addr": "",
             "city": "",
             "country": "",
